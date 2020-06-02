@@ -4,7 +4,7 @@
 * Default domain name:
 service-6p6n381u-1252139706.hk.apigw.tencentcs.com/release
 * 自定义域名：
-api.bilibili.love/r
+api.bilibili.love/
 
 
 All URIs are relative to *http://service-6p6n381u-1252139706.hk.apigw.tencentcs.com/release*
@@ -20,6 +20,11 @@ All URIs are relative to *http://service-6p6n381u-1252139706.hk.apigw.tencentcs.
 
 API name | HTTP request method and path | describe
 ------------- | ------------- | -------------
+**getAvaid** | **GET** /av/{aid} | 
+**getBvbvid** | **GET** /bv/{bvid} | 
+**getLivemid** | **GET** /live/{mid} | 
+**getTags** | **GET** /tags | 
+**getUpstatmid** | **GET** /upstat/{mid} | 
 **getView** | **GET** /view | 
 
 
@@ -56,6 +61,314 @@ So what you need to do:
 ## 2.3 API details
 
 # 
+# **API name:getAvaid**
+> getAvaid(aid)
+> returnType:'String' 
+
+## Describe
+
+
+## Request information
+Calling address:http://service-6p6n381u-1252139706.hk.apigw.tencentcs.com/release/av/{aid}
+Method:GET
+
+## Request parameters
+
+Name | Type | Describe  | Must fill  | Default value
+------------- | ------------- | ------------- | ------------- | -------------
+ **aid** | **Number**|  | 是 | 无
+
+## Return information
+
+### Return parameter type
+
+**'String'**
+
+### Successful response example
+```
+{&quot;code&quot;:0,&quot;message&quot;:&quot;0&quot;,&quot;ttl&quot;:1,&quot;data&quot;:{&quot;aid&quot;:170001,&quot;view&quot;:27711345,&quot;danmaku&quot;:832623,&quot;reply&quot;:132707,&quot;favorite&quot;:695168,&quot;coin&quot;:188985,&quot;share&quot;:509226,&quot;now_rank&quot;:0,&quot;his_rank&quot;:13,&quot;like&quot;:458059,&quot;dislike&quot;:0,&quot;no_reprint&quot;:0,&quot;copyright&quot;:2}}
+```
+### Failure response example
+```
+{&quot;code&quot;:40001,&quot;message&quot;:&quot;aid is empty&quot;}
+```
+
+## Error code
+
+Error code | Error message&Describe
+------------- | -------------
+ **200** | OK
+
+
+## Authentication
+
+
+## Call DEMOO
+```javascript
+var Bilibili = require('bilibili');
+
+var apiInstance = new Bilibili.BilibiliApi();
+
+var aid = 56; // Number | 
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.getAvaid(aid, callback);
+```
+
+# **API name:getBvbvid**
+> getBvbvid(bvid)
+> returnType:'String' 
+
+## Describe
+
+
+## Request information
+Calling address:http://service-6p6n381u-1252139706.hk.apigw.tencentcs.com/release/bv/{bvid}
+Method:GET
+
+## Request parameters
+
+Name | Type | Describe  | Must fill  | Default value
+------------- | ------------- | ------------- | ------------- | -------------
+ **bvid** | **String**|  | 是 | 无
+
+## Return information
+
+### Return parameter type
+
+**'String'**
+
+### Successful response example
+```
+
+```
+### Failure response example
+```
+
+```
+
+## Error code
+
+Error code | Error message&Describe
+------------- | -------------
+ **200** | OK
+
+
+## Authentication
+
+
+## Call DEMOO
+```javascript
+var Bilibili = require('bilibili');
+
+var apiInstance = new Bilibili.BilibiliApi();
+
+var bvid = "bvid_example"; // String | 
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.getBvbvid(bvid, callback);
+```
+
+# **API name:getLivemid**
+> getLivemid(mid)
+> returnType:'String' 
+
+## Describe
+
+
+## Request information
+Calling address:http://service-6p6n381u-1252139706.hk.apigw.tencentcs.com/release/live/{mid}
+Method:GET
+
+## Request parameters
+
+Name | Type | Describe  | Must fill  | Default value
+------------- | ------------- | ------------- | ------------- | -------------
+ **mid** | **Number**|  | 是 | 无
+
+## Return information
+
+### Return parameter type
+
+**'String'**
+
+### Successful response example
+```
+
+```
+### Failure response example
+```
+
+```
+
+## Error code
+
+Error code | Error message&Describe
+------------- | -------------
+ **200** | OK
+
+
+## Authentication
+
+
+## Call DEMOO
+```javascript
+var Bilibili = require('bilibili');
+
+var apiInstance = new Bilibili.BilibiliApi();
+
+var mid = 56; // Number | 
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.getLivemid(mid, callback);
+```
+
+# **API name:getTags**
+> getTags(aid=aid, bvid=bvid)
+> returnType:'String' 
+
+## Describe
+
+
+## Request information
+Calling address:http://service-6p6n381u-1252139706.hk.apigw.tencentcs.com/release/tags
+Method:GET
+
+## Request parameters
+
+Name | Type | Describe  | Must fill  | Default value
+------------- | ------------- | ------------- | ------------- | -------------
+ **aid** | **Number**|  | 否 | 无
+ **bvid** | **String**|  | 否 | 
+
+## Return information
+
+### Return parameter type
+
+**'String'**
+
+### Successful response example
+```
+
+```
+### Failure response example
+```
+
+```
+
+## Error code
+
+Error code | Error message&Describe
+------------- | -------------
+ **200** | OK
+
+
+## Authentication
+
+
+## Call DEMOO
+```javascript
+var Bilibili = require('bilibili');
+
+var apiInstance = new Bilibili.BilibiliApi();
+
+var opts = { 
+  'aid': 56, // Number | 
+  'bvid': "" // String | 
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.getTags(opts, callback);
+```
+
+# **API name:getUpstatmid**
+> getUpstatmid(mid)
+> returnType:'String' 
+
+## Describe
+
+
+## Request information
+Calling address:http://service-6p6n381u-1252139706.hk.apigw.tencentcs.com/release/upstat/{mid}
+Method:GET
+
+## Request parameters
+
+Name | Type | Describe  | Must fill  | Default value
+------------- | ------------- | ------------- | ------------- | -------------
+ **mid** | **Number**| up主id | 是 | 无
+
+## Return information
+
+### Return parameter type
+
+**'String'**
+
+### Successful response example
+```
+{&quot;code&quot;:0,&quot;message&quot;:&quot;0&quot;,&quot;ttl&quot;:1,&quot;data&quot;:{&quot;archive&quot;:{&quot;view&quot;:2020884},&quot;article&quot;:{&quot;view&quot;:0},&quot;likes&quot;:33878}}
+```
+### Failure response example
+```
+{&quot;code&quot;:-400,&quot;message&quot;:&quot;请求错误&quot;,&quot;ttl&quot;:1}
+```
+
+## Error code
+
+Error code | Error message&Describe
+------------- | -------------
+ **200** | OK
+
+
+## Authentication
+
+
+## Call DEMOO
+```javascript
+var Bilibili = require('bilibili');
+
+var apiInstance = new Bilibili.BilibiliApi();
+
+var mid = 56; // Number | up主id
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.getUpstatmid(mid, callback);
+```
+
 # **API name:getView**
 > getView(aid=aid, bVid=bVid)
 > returnType:'String' 
