@@ -2,12 +2,11 @@
 
 
 * Default domain name:
-service-6p6n381u-1252139706.hk.apigw.tencentcs.com/release
-* 自定义域名：
 api.bilibili.love/
+* 自定义域名：
 
 
-All URIs are relative to *http://service-6p6n381u-1252139706.hk.apigw.tencentcs.com/release*
+All URIs are relative to *https://api.bilibili.love*
 # SDK document directory
 * 1. API list
 * 2. API call
@@ -20,12 +19,12 @@ All URIs are relative to *http://service-6p6n381u-1252139706.hk.apigw.tencentcs.
 
 API name | HTTP request method and path | describe
 ------------- | ------------- | -------------
-**getAvaid** | **GET** /av/{aid} | 
-**getBvbvid** | **GET** /bv/{bvid} | 
-**getLivemid** | **GET** /live/{mid} | 
-**getTags** | **GET** /tags | 
-**getUpstatmid** | **GET** /upstat/{mid} | 
-**getView** | **GET** /view | 
+**getAvaid** | **GET** /av/{aid} | 根据aid获取信息
+**getBvbvid** | **GET** /bv/{bvid} | 根据BVid获取视频信息
+**getLivemid** | **GET** /live/{mid} | 根据up主UID获取直播间地址
+**getTags** | **GET** /tags | 获取视频标签
+**getUpstatmid** | **GET** /upstat/{mid} | 获取up主信息
+**getView** | **GET** /view | 根据aid或BVid获取视频信息
 
 
 **(If the defined API's request method is any method, the SDK defaults to get method,You can modify the prompt content in client_package/api/*_api.py ,to change the method you want to use)** 
@@ -66,7 +65,7 @@ So what you need to do:
 > returnType:'String' 
 
 ## Describe
-
+根据aid获取信息
 
 ## Request information
 Calling address:http://service-6p6n381u-1252139706.hk.apigw.tencentcs.com/release/av/{aid}
@@ -127,7 +126,7 @@ apiInstance.getAvaid(aid, callback);
 > returnType:'String' 
 
 ## Describe
-
+根据BVid获取视频信息
 
 ## Request information
 Calling address:http://service-6p6n381u-1252139706.hk.apigw.tencentcs.com/release/bv/{bvid}
@@ -188,7 +187,7 @@ apiInstance.getBvbvid(bvid, callback);
 > returnType:'String' 
 
 ## Describe
-
+根据up主UID获取直播间地址
 
 ## Request information
 Calling address:http://service-6p6n381u-1252139706.hk.apigw.tencentcs.com/release/live/{mid}
@@ -249,7 +248,7 @@ apiInstance.getLivemid(mid, callback);
 > returnType:'String' 
 
 ## Describe
-
+获取视频标签
 
 ## Request information
 Calling address:http://service-6p6n381u-1252139706.hk.apigw.tencentcs.com/release/tags
@@ -313,7 +312,7 @@ apiInstance.getTags(opts, callback);
 > returnType:'String' 
 
 ## Describe
-
+获取up主信息
 
 ## Request information
 Calling address:http://service-6p6n381u-1252139706.hk.apigw.tencentcs.com/release/upstat/{mid}
@@ -374,7 +373,7 @@ apiInstance.getUpstatmid(mid, callback);
 > returnType:'String' 
 
 ## Describe
-
+根据aid或BVid获取视频信息
 
 ## Request information
 Calling address:http://service-6p6n381u-1252139706.hk.apigw.tencentcs.com/release/view
