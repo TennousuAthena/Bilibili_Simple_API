@@ -21,7 +21,9 @@ API name | HTTP request method and path | describe
 ------------- | ------------- | -------------
 **getAvaid** | **GET** /av/{aid} | 根据aid获取信息
 **getBvbvid** | **GET** /bv/{bvid} | 根据BVid获取视频信息
+**getDmXml** | **GET** /dm/xml | 获取xml格式的弹幕
 **getLivemid** | **GET** /live/{mid} | 根据up主UID获取直播间地址
+**getPlayurl** | **GET** /playurl | 
 **getTags** | **GET** /tags | 获取视频标签
 **getUpstatmid** | **GET** /upstat/{mid} | 获取up主信息
 **getView** | **GET** /view | 根据aid或BVid获取视频信息
@@ -182,6 +184,67 @@ var callback = function(error, data, response) {
 apiInstance.getBvbvid(bvid, callback);
 ```
 
+# **API name:getDmXml**
+> getDmXml(cid)
+> returnType:'String' 
+
+## Describe
+获取xml格式的弹幕
+
+## Request information
+Calling address:http://service-6p6n381u-1252139706.hk.apigw.tencentcs.com/release/dm/xml
+Method:GET
+
+## Request parameters
+
+Name | Type | Describe  | Must fill  | Default value
+------------- | ------------- | ------------- | ------------- | -------------
+ **cid** | **Number**|  | 是 | 无
+
+## Return information
+
+### Return parameter type
+
+**'String'**
+
+### Successful response example
+```
+
+```
+### Failure response example
+```
+
+```
+
+## Error code
+
+Error code | Error message&Describe
+------------- | -------------
+ **200** | OK
+
+
+## Authentication
+
+
+## Call DEMOO
+```javascript
+var Bilibili = require('bilibili');
+
+var apiInstance = new Bilibili.BilibiliApi();
+
+var cid = 56; // Number | 
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.getDmXml(cid, callback);
+```
+
 # **API name:getLivemid**
 > getLivemid(mid)
 > returnType:'String' 
@@ -241,6 +304,75 @@ var callback = function(error, data, response) {
   }
 };
 apiInstance.getLivemid(mid, callback);
+```
+
+# **API name:getPlayurl**
+> getPlayurl(cid, aid=aid, bvid=bvid, qn=qn)
+> returnType:'String' 
+
+## Describe
+
+
+## Request information
+Calling address:http://service-6p6n381u-1252139706.hk.apigw.tencentcs.com/release/playurl
+Method:GET
+
+## Request parameters
+
+Name | Type | Describe  | Must fill  | Default value
+------------- | ------------- | ------------- | ------------- | -------------
+ **cid** | **Number**|  | 是 | 无
+ **aid** | **Number**|  | 否 | 无
+ **bvid** | **String**|  | 否 | 
+ **qn** | **Number**|  | 否 | 64
+
+## Return information
+
+### Return parameter type
+
+**'String'**
+
+### Successful response example
+```
+
+```
+### Failure response example
+```
+
+```
+
+## Error code
+
+Error code | Error message&Describe
+------------- | -------------
+ **200** | OK
+
+
+## Authentication
+
+
+## Call DEMOO
+```javascript
+var Bilibili = require('bilibili');
+
+var apiInstance = new Bilibili.BilibiliApi();
+
+var cid = 56; // Number | 
+
+var opts = { 
+  'aid': 56, // Number | 
+  'bvid': "", // String | 
+  'qn': 64 // Number | 
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.getPlayurl(cid, opts, callback);
 ```
 
 # **API name:getTags**
